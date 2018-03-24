@@ -1,0 +1,28 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: {{ url }}
+title: {{ title }}
+email: {{ email }}
+author: {{ author }}
+description: {{ description }}
+copyright: 'Copyright &copy; 2018 {{ author }}. All Rights Reserved.'
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  {% for item in socials %}
+  - title: "{{ item.title }}""
+    url: "{{ item.url }}"
+  {% endfor %}
